@@ -12,14 +12,15 @@ MATHLIBRARY_API float PI();
 MATHLIBRARY_API float InvPI();
 MATHLIBRARY_API double DegToRad(double _a);
 MATHLIBRARY_API double RadToDeg(double _a);
-MATHLIBRARY_API double Sin(double _x);
 MATHLIBRARY_API double Cos(double _x);
-MATHLIBRARY_API double Tan(double _x);
-MATHLIBRARY_API double ASin(unsigned _a);
 MATHLIBRARY_API double ACos(unsigned _a);
+MATHLIBRARY_API double Sin(double _x);
+MATHLIBRARY_API double ASin(unsigned _a);
+MATHLIBRARY_API double Tan(double _x);
 MATHLIBRARY_API double ATan(unsigned _a);
 MATHLIBRARY_API double ATan2(unsigned _a);
 
 //Math
+MATHLIBRARY_API double Fact(double _nbre);
 MATHLIBRARY_API double Pow(double _nbre, int _pow);
 MATHLIBRARY_API double Sqrt(double _nbre);
