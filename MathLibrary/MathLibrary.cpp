@@ -90,6 +90,11 @@ double ASin(unsigned _a)
 	return 1/Sin(_a);
 }
 
+double Tan(double _x)
+{
+	return Sin(_x)/Cos(_x);
+}
+
 double ATan(unsigned _a)
 {
 	return 1/Tan(_a);
