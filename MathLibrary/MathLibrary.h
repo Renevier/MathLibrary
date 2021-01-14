@@ -19,3 +19,7 @@ MATHLIBRARY_API double ASin(unsigned _a);
 MATHLIBRARY_API double ACos(unsigned _a);
 MATHLIBRARY_API double ATan(unsigned _a);
 MATHLIBRARY_API double ATan2(unsigned _a);
+
+//Math
+MATHLIBRARY_API double Pow(double _nbre, int _pow);
+MATHLIBRARY_API double Sqrt(double _nbre);

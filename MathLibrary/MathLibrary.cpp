@@ -8,7 +8,7 @@ float PI()
 
 float InvPI()
 {
-	return 0.0f;
+	return 1/PI();
 }
 
 double DegToRad(double _a)
@@ -21,77 +21,32 @@ double RadToDeg(double _a)
 	return _a *(180/PI());
 }
 
-double Sin(double _x)
+double Pow(double _nbre, int _pow)
 {
-	double sign = 1;
-
-	if (_x < 0) {
-		sign = -1.0;
-		_x = -_x;
-	}
-
-	if (_x > 360) _x -= int(_x / 360) * 360;
-		_x *= PI() / 180.0;
-
 	double res = 0;
-	double term = _x;
-	int k = 1;
 
-	while (res + term != res)
+	if (_nbre == 0)
+		return 0;
+
+	if (_pow == 0)
+		return 1;
+	
+	for (int i = 0; i <= _pow; i++)
+		res *= _nbre;
+
+		return res;
+}
+
+double Sqrt(double _nbre)
+{
+	double x1 = (_nbre * 1.0) / 2;
+	double x2 = (x1 + (_nbre / x1)) / 2;
+
+	while (x1 - x2 >= 0.0000001) 
 	{
-		res += term;
-		k += 2;
-		term *= -_x * _x / k / (k - 1);
+		x1 = x2;
+		x2 = (x1 + (_nbre / x1)) / 2;
 	}
 
-	return sign * res;
-}
-
-double Cos(double _x)
-{
-	if (_x < 0) 
-		_x = -_x;
-
-	if (_x > 360)
-		_x -= int(_x / 360) * 360;
-
-	_x *= PI() / 180.0;
-
-	double res = 0;
-	double term = 1;
-	int k = 0;
-
-	while (res + term != res) 
-	{
-		res += term;
-		k += 2;
-		term *= -_x * _x / k / (k - 1);
-	}
-
-	return res;
-}
-
-double Tan(double _x)
-{
-	return;
-}
-
-double ASin(unsigned _a)
-{
-	return;
-}
-
-double ACos(unsigned _a)
-{
-	return;
-}
-
-double ATan(unsigned _a)
-{
-	return;
-}
-
-double ATan2(unsigned _a)
-{
-	return;
+	return x2;
 }
