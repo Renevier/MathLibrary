@@ -1,6 +1,11 @@
 #include "pch.h"
 #include "MathLibrary.h"
 
+double Dmod(double val, double modulo)
+{
+	return val - (/*floor*/(val / modulo) * modulo);
+}
+
 double PI()
 {
 	return 3.141592653589793238462643383279502884;
@@ -192,7 +197,43 @@ double Lerp(double _a, double _b, double _t)
 	return res;
 }
 
+//double LerpAngle(double _start, double _end, double _amount)
+//{
+//	double shortest_angle = ((((_end - _start) % 360) + 540) % 360) - 180;
+//
+//	return _start + (shortest_angle * _amount) % 360;
+//}
+
 double LerpUnclamped(double _a, double _b, double _t)
 {
 	return _a + _t * (_b - _a);
+}
+
+double InverseLerp(double _a, double _b, double _t)
+{
+	return (_t - _a) / (_b - _a);
+}
+
+double Max(double _a, double _b)
+{
+	if (_a > _b)
+		return _a;
+	else
+		return _b;
+}
+
+double Min(double _a, double _b)
+{
+	if (_a < _b)
+		return _a;
+	else
+		return _b;
+}
+
+double PingPong(double _a, double _b)
+{
+	double range = _b - _a;
+
+
+	return 0.0;
 }
