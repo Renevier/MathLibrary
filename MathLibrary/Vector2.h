@@ -9,16 +9,17 @@ private:
 
 public:
 	Vector2();
+	Vector2(float _x, float _y);
 	~Vector2();
 
-	float Down();
-	float Left();
+	Vector2 Down(int _nb);
+	Vector2 Left(int _nb);
+	Vector2 Right(int _nb);
+	Vector2 Up(int _nb);
+	Vector2 Zero();
 	float NegativeInfiny();
 	float One();
 	float PositiveInfinity();
-	float Right();
-	float Up();
-	float Zero();
 	float Magnitude();
 	float Normalized();
 	float SqrMagnitude();
