@@ -17,11 +17,12 @@ public:
 	Vector2 Right(int _nb);
 	Vector2 Up(int _nb);
 	Vector2 Zero();
+	Vector2 One();
+	Vector2 Dot(Vector2 _vector);
+	Vector2 Normalized();
 	float NegativeInfiny();
-	float One();
 	float PositiveInfinity();
 	float Magnitude();
-	float Normalized();
 	float SqrMagnitude();
 	float Equal();
 	float Normalize();
@@ -30,7 +31,6 @@ public:
 	float Angle();
 	float ClampMagnitude();
 	float Distance();
-	float Dot();
 	float Lerp();
 	float LerpUnclamped();
 	float Max();

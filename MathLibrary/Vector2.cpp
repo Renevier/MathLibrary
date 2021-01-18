@@ -41,3 +41,13 @@ Vector2 Vector2::Zero()
 {
 	return Vector2(0, 0);
 }
+
+Vector2 Vector2::One()
+{
+	return Vector2(1, 1);
+}
+
+Vector2 Vector2::Dot(Vector2 _vector)
+{
+	return Vector2(this->x * _vector.x, this->y * _vector.y);
+}
