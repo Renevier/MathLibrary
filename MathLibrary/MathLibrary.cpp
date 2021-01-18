@@ -1,12 +1,12 @@
 #include "pch.h"
 #include "MathLibrary.h"
 
-float PI()
+double PI()
 {
 	return 3.141592653589793238462643383279502884;
 }
 
-float InvPI()
+double InvPI()
 {
 	return 1/PI();
 }
@@ -152,4 +152,47 @@ double Sqrt(double _nbre)
 	}
 
 	return x2;
+}
+
+double Exp(double _nbre)
+{
+	float exp = 2.71828182845;
+	double res = 0;
+
+	if(_nbre == 0)
+		return 1;
+
+	for (int i = 0; i <= _nbre; i++)
+		res *= exp;
+}
+
+double Clamp(double _min, double _max, double _nb)
+{
+	if (_nb >= _max)
+		_nb = _max;
+
+	if (_nb <= _min)
+		_nb = _min;
+
+	return _nb;
+}
+
+//T is a varied value between 0 and 1
+double Lerp(double _a, double _b, double _t)
+{
+	Clamp(0, 1, _t);
+
+	double res = _a + _t * (_b - _a);
+
+	if (_t == 0)
+		return _a;
+	if (_t == 1)
+		return _b;
+
+	return res;
+}
+
+double LerpUnclamped(double _a, double _b, double _t)
+{
+	return _a + _t * (_b - _a);
 }
