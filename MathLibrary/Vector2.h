@@ -12,29 +12,37 @@ public:
 	Vector2(float _x, float _y);
 	~Vector2();
 
+	double Magnitude();
+
+	Vector2 Min(Vector2 _vector);
+	Vector2 Max(Vector2 _vector);
+
 	Vector2 Down(int _nb);
 	Vector2 Left(int _nb);
 	Vector2 Right(int _nb);
 	Vector2 Up(int _nb);
-	Vector2 Zero();
-	Vector2 One();
+
+	void Zero();
+	void One();
+	void Normalize();
+
 	Vector2 Dot(Vector2 _vector);
+
+	bool Equal(Vector2 _vector);
+	double SqrMagnitude();
+
 	Vector2 Normalized();
+	//ToString();
+
 	float NegativeInfiny();
 	float PositiveInfinity();
-	float Magnitude();
-	float SqrMagnitude();
-	float Equal();
-	float Normalize();
+	
 	float Set();
-	float ToString();
 	float Angle();
 	float ClampMagnitude();
 	float Distance();
 	float Lerp();
 	float LerpUnclamped();
-	float Max();
-	float Min();
 	float MoveTowards();
 	float Perpandicular();
 	float Reflect();

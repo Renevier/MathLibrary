@@ -45,6 +45,6 @@ MATHLIBRARY_API double Repeat(double _a, double _b);
 MATHLIBRARY_API double PingPong(double _a, double _b);
 MATHLIBRARY_API double Clamp(double _min, double _max, double _nb);
 MATHLIBRARY_API double Ceil(double _min, double _max, double _nb);
-MATHLIBRARY_API double Floor(double _min, double _max, double _nb);
+MATHLIBRARY_API double Floor(double _nb);
 MATHLIBRARY_API double Average(double _min, double _max, double _nb);
-MATHLIBRARY_API double Epsilon(double _min, double _max, double _nb);
+MATHLIBRARY_API double Epsilon();

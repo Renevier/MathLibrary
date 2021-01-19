@@ -182,6 +182,16 @@ double Clamp(double _min, double _max, double _nb)
 	return _nb;
 }
 
+double Floor(double _nb)
+{
+	return static_cast<int>(_nb);
+}
+
+double Epsilon()
+{
+	return 0.000000000001;
+}
+
 //T is a varied value between 0 and 1
 double Lerp(double _a, double _b, double _t)
 {
@@ -228,12 +238,4 @@ double Min(double _a, double _b)
 		return _a;
 	else
 		return _b;
-}
-
-double PingPong(double _a, double _b)
-{
-	double range = _b - _a;
-
-
-	return 0.0;
 }
