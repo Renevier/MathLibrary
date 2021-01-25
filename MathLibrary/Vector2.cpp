@@ -7,7 +7,7 @@ Vector2::Vector2()
 	this->y = 0.f;
 }
 
-Vector2::Vector2(float _x, float _y)
+Vector2::Vector2(double _x, double _y)
 {
 	this->x = _x;
 	this->y = _y;
@@ -121,3 +121,33 @@ Vector2 Vector2::Normalized()
 	return myVector;
 }
 
+Vector2 Vector2::NegativeInfiny()
+{
+	return Vector2(negativeInfiny(), negativeInfiny());
+}
+
+Vector2 Vector2::PositiveInfinity()
+{
+	return Vector2(positiveInfinity(), positiveInfinity());
+}
+
+double Vector2::GetX()
+{
+	return this->x;
+}
+
+double Vector2::GetY()
+{
+	return this->y;
+}
+
+Vector2 Vector2::GetVector2()
+{
+	return Vector2(this->x, this->y);
+}
+
+void Vector2::Set(double _x, double _y)
+{
+	this->x = _x;
+	this->y = _y;
+}

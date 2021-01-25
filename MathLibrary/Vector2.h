@@ -9,7 +9,7 @@ private:
 
 public:
 	Vector2();
-	Vector2(float _x, float _y);
+	Vector2(double _x, double _y);
 	~Vector2();
 
 	double Magnitude();
@@ -34,10 +34,16 @@ public:
 	Vector2 Normalized();
 	//ToString();
 
-	float NegativeInfiny();
-	float PositiveInfinity();
-	
-	float Set();
+	Vector2 NegativeInfiny();
+	Vector2 PositiveInfinity();
+
+	//Get
+	double GetX();
+	double GetY();
+	Vector2 GetVector2();
+
+	void Set(double _x, double _y);
+
 	float Angle();
 	float ClampMagnitude();
 	float Distance();
@@ -49,10 +55,5 @@ public:
 	float Scale();
 	float SignedAngle();
 	float SmoothDamp();
-
-	//Get
-	float GetX();
-	float GetY();
-	float GetVector2();
 };
 

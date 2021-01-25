@@ -40,7 +40,9 @@ MATHLIBRARY_API double SmoothStep();
 
 //Limites
 MATHLIBRARY_API double Max(double _a, double _b);
+MATHLIBRARY_API double positiveInfinity();
 MATHLIBRARY_API double Min(double _a, double _b);
+MATHLIBRARY_API double negativeInfiny();
 MATHLIBRARY_API double Repeat(double _a, double _b);
 MATHLIBRARY_API double PingPong(double _a, double _b);
 MATHLIBRARY_API double Clamp(double _min, double _max, double _nb);

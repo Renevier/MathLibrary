@@ -232,10 +232,20 @@ double Max(double _a, double _b)
 		return _b;
 }
 
+double positiveInfinity()
+{
+	return 9999999999999999999999.f;
+}
+
 double Min(double _a, double _b)
 {
 	if (_a < _b)
 		return _a;
 	else
 		return _b;
+}
+
+double negativeInfiny()
+{
+	return -99999999999999.f;
 }
