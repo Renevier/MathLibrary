@@ -44,7 +44,7 @@ public:
 
 	void Set(double _x, double _y);
 
-	float Angle();
+	float Angle(Vector2 _from, Vector2 _to);
 	float ClampMagnitude();
 	float Distance();
 	float Lerp();

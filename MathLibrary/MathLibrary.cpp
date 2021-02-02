@@ -171,6 +171,11 @@ double Exp(double _nbre)
 		res *= exp;
 }
 
+double PingPong(double _t, double _length)
+{
+	return Clamp(0, _length, _t);
+}
+
 double Clamp(double _min, double _max, double _nb)
 {
 	if (_nb >= _max)
@@ -180,6 +185,14 @@ double Clamp(double _min, double _max, double _nb)
 		_nb = _min;
 
 	return _nb;
+}
+
+double Ceil(double _nb)
+{
+	if (_nb == Floor(_nb))
+		return _nb;
+	else
+		return Floor(_nb) + 1;
 }
 
 double Floor(double _nb)

@@ -58,22 +58,22 @@ Vector2 Vector2::Max(Vector2 _vector)
 
 Vector2 Vector2::Down(int _nb)
 {
-	return Vector2(this->x, this->y - _nb);
+	return Vector2(this->x, static_cast<float>(this->y - _nb));
 }
 
 Vector2 Vector2::Left(int _nb)
 {
-	return Vector2(this->x - _nb, this->y);
+	return Vector2(static_cast<float>(this->x - _nb), this->y);
 }
 
 Vector2 Vector2::Right(int _nb)
 {
-	return Vector2(this->x + _nb, this->y);
+	return Vector2(static_cast<float>(this->x + _nb), this->y);
 }
 
 Vector2 Vector2::Up(int _nb)
 {
-	return Vector2(this->x, this->y + _nb);
+	return Vector2(this->x, static_cast<float>(this->y + _nb));
 }
 
 void Vector2::Zero()
@@ -96,7 +96,7 @@ void Vector2::Normalize()
 
 Vector2 Vector2::Dot(Vector2 _vector)
 {
-	return Vector2(this->x * _vector.x, this->y * _vector.y);
+	return Vector2(static_cast<float>(this->x * _vector.x), static_cast<float>(this->y * _vector.y));
 }
 
 bool Vector2::Equal(Vector2 _vector)
